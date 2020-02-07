@@ -1,0 +1,5 @@
+/node_modules
+/public/storage
+/vendor
+/.idea
+/package-lock.json
