@@ -1,5 +1,5 @@
 In This Project I Mainly Focus 3 things on 07 Feb 2020.
-                                        MERN(Mongo, Express Server, ReactJs. Nodejs)
+                                        MERN(Mysql, Express Server, ReactJs. Nodejs)
 
 1) Node JS
 2) React Js
@@ -11,5 +11,18 @@ b) And you can learn here some basic of webpack.
 c) how to use api basic.
 
 
-Next time I will start Database linking in nodejs. Actually i am learning too.
+
+                       DATABASE MIGRATIONS
+1)  create a migration
+node migration.js add migration create_table_users
+node migration up for running migrations
+
+2) fill some data in users table
+
+3) And Make api and run localhost:8080/show command.
+
+
+
+
+
 
