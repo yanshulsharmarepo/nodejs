@@ -1,5 +1,6 @@
 In This Project I Mainly Focus 3 things on 07 Feb 2020.
-                                        MERN(Mysql, Express Server, ReactJs. Nodejs)
+                                        
+                    MERN(Mysql, Express Server, ReactJs. Nodejs)
 
 1) Node JS
 2) React Js
@@ -12,6 +13,7 @@ c) how to use api basic.
 
 
 
+                          010 Feb 2020.
                        DATABASE MIGRATIONS
 1)  create a migration
 node migration.js add migration create_table_users
@@ -21,6 +23,12 @@ node migration up for running migrations
 
 3) And Make api and run localhost:8080/show command.
 
+   a)  GET localhost:8080/show
+   b)  POST localhost:8080/update/:id
+   c)  POST localhost:8080/create
+   d)  POST localhost:8080/delete/:id
+   
+   
 
 
 

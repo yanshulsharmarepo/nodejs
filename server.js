@@ -30,21 +30,37 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 
 app.use("/javascripts", express.static("Modules/myApp/Assets/reactBuild"));
+const LoggerMiddleware = (req,res,next) =>{
+    req.requestTime = Date.now()
+    next();
+}
+
+app.use(LoggerMiddleware);
 
 app.get('/', function (req, res) {
 
-
-  //  console.log("uel",req.protocol+"://"+req.headers.host);
     res.render("index",{ title: 'Express', scripts: [__dirname+'/Modules/myApp/Assets/reactBuild/myApp.js'], url: ''+req.protocol+"://"+req.headers.host+''})
 
 });
 
 
 app.get('/show', function (req, res) {
-   // console.log("sss",UserModel.getEmployeeNames());
-   Users.myUsers(res);
-
+   Users.myUsers(req,res);
 });
+
+app.post('/update/:id', function (req, res) {
+    Users.update(req,res);
+});
+
+app.post('/create', function (req, res) {
+    Users.create(req,res);
+});
+
+app.post('/delete/:id', function (req, res) {
+    Users.delete(req,res);
+});
+
+
 
 const sample_server = http.createServer(app);
 
